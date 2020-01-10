@@ -1,4 +1,6 @@
-from matplotlib.pyplot import imsave
+from matplotlib import pyplot as plt
 
-def write(path, image):
-    imsave(path,image)
+def write(image, title):
+    plt.title(title)
+    plt.imshow(image, cmap='gray')
+    plt.savefig(title)
